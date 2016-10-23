@@ -5,21 +5,17 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-@Deprecated
-/**
- * @see PageRequestSupport
- */
-public class PageSupport implements PageRequest , Serializable {
+public class PageRequestSupport implements PageRequest , Serializable {
 	private int pageIndex = 0;
 	private int pageSize = 10;
 
-	public static PageSupport maxPageSizePageSupport(){
-		return new PageSupport(0,Integer.MAX_VALUE);
+	public static PageRequestSupport maxPageSizePageSupport(){
+		return new PageRequestSupport(0,Integer.MAX_VALUE);
 	}
 
-	public PageSupport(){}
+	public PageRequestSupport(){}
 
-	public PageSupport(int pageIndex, int pageSize){
+	public PageRequestSupport(int pageIndex, int pageSize){
 		this.pageIndex = pageIndex;
 		this.pageSize = pageSize;
 	}
