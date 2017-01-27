@@ -9,17 +9,17 @@ import java.io.Serializable;
 /**
  * @see PageRequestSupport
  */
-public class PageSupport implements PageRequest , Serializable {
+public class PageSupportBak implements PageRequest , Serializable {
 	private int pageIndex = 0;
 	private int pageSize = 10;
 
-	public static PageSupport maxPageSizePageSupport(){
-		return new PageSupport(0,Integer.MAX_VALUE);
+	public static PageSupportBak maxPageSizePageSupport(){
+		return new PageSupportBak(0,Integer.MAX_VALUE);
 	}
 
-	public PageSupport(){}
+	public PageSupportBak(){}
 
-	public PageSupport(int pageIndex, int pageSize){
+	public PageSupportBak(int pageIndex, int pageSize){
 		this.pageIndex = pageIndex;
 		this.pageSize = pageSize;
 	}

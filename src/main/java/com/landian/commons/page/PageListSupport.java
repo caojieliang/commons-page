@@ -1,25 +1,23 @@
 package com.landian.commons.page;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.List;
 
-public class PageListSupport<T> extends PageSupport implements IPageList<T>, Serializable{
+public class PageListSupport<T> extends PageRequestSupport implements IPageList<T>, Serializable{
+
+	@Setter @Getter
 	private long count = 0;
+	@Setter @Getter
 	private List<T> list;
 
-	public List<T> getList() {
-		return list;
-	}
-
-	public void setList(List<T> list) {
-		this.list = list;
-	}
-
+	/**
+	 * 历史遗留问题
+	 */
 	public void setCount(Long count) {
 		this.count = count;
 	}
 
-	public long getCount(){
-		return count;
-	}
 }

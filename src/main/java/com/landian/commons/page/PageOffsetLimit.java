@@ -1,12 +1,17 @@
 package com.landian.commons.page;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@ApiModel(value = "PageOffsetLimit", description = "PageOffsetLimit")
 public class PageOffsetLimit implements PageRequest , Serializable {
+	@ApiModelProperty(value = "分页起始游标(由0开始)", required = true)
 	private int offset = 0;
+	@ApiModelProperty(value = "分页大小", required = true)
 	private int limit = 10;
 
 	public static PageOffsetLimit maxPageOffsetLimit(){

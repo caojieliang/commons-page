@@ -10,6 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.2.1.RELEASE</spring.version>
 		<lombok.version>1.14.4</lombok.version>
+		<swagger-annotations.version>1.5.3</swagger-annotations.version>
 	</properties>  	
 	
 	<dependencies>
@@ -24,7 +25,11 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger-annotations.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
