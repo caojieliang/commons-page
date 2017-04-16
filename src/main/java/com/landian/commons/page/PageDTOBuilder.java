@@ -13,4 +13,16 @@ public class PageDTOBuilder{
 //        return PageDTO.builder().total(longVal.intValue()).rows(list).build();
         return pageDTO;
     }
+
+    public static <T> PageDTO<T> build(long total, List<T> list){
+        Long longVal = total;
+        return build(longVal.intValue(),list);
+    }
+
+    public static <T> PageDTO<T> build(int total, List<T> list){
+        PageDTO pageDTO = new PageDTO<T>();
+        pageDTO.setTotal(total);
+        pageDTO.setRows(list);
+        return pageDTO;
+    }
 }
