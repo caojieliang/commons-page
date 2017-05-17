@@ -9,6 +9,10 @@ public class PageRequestSupport implements PageRequest , Serializable {
 	private int pageIndex = 0;
 	private int pageSize = 10;
 
+	public static PageRequestSupport newInstance(int pageIndex, int pageSize){
+		return new PageRequestSupport(pageIndex,pageSize);
+	}
+
 	public static PageRequestSupport maxPageSizePageSupport(){
 		return new PageRequestSupport(0,Integer.MAX_VALUE);
 	}
